@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style2.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    <div id="infoContainer"></div>
+
+    <div class="format-selection">
+        <label>
+            <input type="radio" name="format" value="chart" checked> График
+        </label>
+        <label>
+            <input type="radio" name="format" value="table"> Таблица
+        </label>
+    </div>
+
+    <div class="data-selection">
+        <label>
+            <input type="checkbox" name="data" value="temperature" checked> Температура
+        </label>
+        <label>
+            <input type="checkbox" name="data" value="humidity" checked> Влажность
+        </label>
+        <label>
+            <input type="checkbox" name="data" value="pressure" checked> Давление
+        </label>
+    </div>
+
+    <div class="date-selection">
+        <label for="startDate">Дата начала:</label>
+        <input type="date" id="startDate">
+        <label for="endDate">Дата конца:</label>
+        <input type="date" id="endDate">
+    </div>
+
+    <button id="renderButton">Отобразить данные</button>
+
+    <div id="dataContainer" class="container">
+        <div id="chartContainer" class="chart-wrapper">
+            <div class="chart-container" id="temperatureChartContainer">
+                <h2>График температуры</h2>
+                <canvas id="temperatureChart"></canvas>
+            </div>
+            <div class="chart-container" id="humidityChartContainer">
+                <h2>График влажности</h2>
+                <canvas id="humidityChart"></canvas>
+            </div>
+            <div class="chart-container" id="pressureChartContainer">
+                <h2>График давления</h2>
+                <canvas id="pressureChart"></canvas>
+            </div>
+        </div>
+        <div id="tableContainer" style="display:none;">
+            <table id="dataTable">
+                <thead>
+                    <tr>
+                        <th>Тип данных</th>
+                        <th>Дата измерения</th>
+                        <th>Значение</th>
+                    </tr>
+                </thead>
+                <tbody></tbody>
+            </table>
+        </div>
+    </div>
+
+    <script src="object.js"></script>
+</body>
+</html>

@@ -1,0 +1,116 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    font-family: Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
+    position: relative; /* Добавлено для позиционирования footer */
+}
+
+#infoContainer {
+    text-align: left;
+    padding: 20px;
+}
+
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    align-items: flex-start;
+    flex: 1;
+    padding: 20px;
+}
+
+.chart-wrapper {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+    width: 100%;
+}
+
+.chart-container {
+    flex: 1;
+    max-width: 60%; /* Увеличенная ширина контейнера графика */
+    margin: 50px; /* Отступ между графиками */
+}
+
+.chart-container canvas {
+    width: 100% !important;
+    height: auto !important;
+}
+
+.footer {
+    text-align: center; /* Выравнивание текста по центру */
+    background-color: #d8fff0; /* Цвет фона */
+    padding: 10px 0; /* Внутренние отступы */
+    width: 100%; /* Ширина 100% экрана */
+}
+
+.additional-text {
+    text-align: center; /* Выравнивание текста по центру */
+    position: absolute; /* Абсолютное позиционирование */
+    bottom: 20px; /* Отступ от нижнего края */
+    left: 50%; /* Выравнивание по центру */
+    transform: translateX(-50%); /* Смещение по горизонтали */
+}
+
+.info-text {
+    font-size: 16px;
+    margin-bottom: 10px;
+    color: #0e1113;
+}
+
+.info-text span {
+    font-weight: bold;
+    margin-right: 5px;
+}
+
+.format-selection, .data-selection {
+    display: flex;
+    justify-content: flex-start; /* Сместить влево */
+    padding: 0 20px;
+    margin: 10px 0;
+}
+
+.format-selection label, .data-selection label {
+    margin: 0 10px;
+}
+
+button {
+    display: block;
+    margin: 10px 20px;
+    padding: 10px 20px;
+    background-color: #008cba;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    width: 200px; /* Устанавливаем фиксированную ширину кнопки */
+}
+
+button:hover {
+    background-color: #005f5f;
+}
+
+#tableContainer {
+    width: 100%;
+    padding: 20px;
+}
+
+#dataTable {
+    width: 50%;
+    border-collapse: collapse;
+}
+
+#dataTable th, #dataTable td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: left; /* Сместить данные влево */
+}
+
+#dataTable th {
+    background-color: #f2f2f2;
+    font-weight: bold;
+}
